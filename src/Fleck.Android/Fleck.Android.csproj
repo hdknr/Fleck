@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{587D3C6D-6D36-4559-A5F4-ACA122CFAA8F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Fleck.Android</RootNamespace>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <AssemblyName>Fleck.Android</AssemblyName>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+   <Compile Include="..\Fleck\ConnectionNotAvailableException.cs">
+     <Link>ConnectionNotAvailableException.cs</Link>
+   </Compile>
+   <Compile Include="..\Fleck\FleckLog.cs">
+     <Link>FleckLog.cs</Link>
+   </Compile>
+   <Compile Include="..\Fleck\FrameType.cs">
+     <Link>FrameType.cs</Link>
+   </Compile>
+   <Compile Include="..\Fleck\HandlerFactory.cs">
+     <Link>HandlerFactory.cs</Link>
+   </Compile>
+   <Compile Include="..\Fleck\HandshakeException.cs">
+     <Link>HandshakeException.cs</Link>
+   </Compile>
+   <Compile Include="..\Fleck\IntExtensions.cs">
+     <Link>IntExtensions.cs</Link>
+   </Compile>
+   <Compile Include="..\Fleck\QueuedStream.cs">
+     <Link>QueuedStream.cs</Link>
+   </Compile>
+   <Compile Include="..\Fleck\ReadState.cs">
+     <Link>ReadState.cs</Link>
+   </Compile>
+   <Compile Include="..\Fleck\RequestParser.cs">
+     <Link>RequestParser.cs</Link>
+   </Compile>
+   <Compile Include="..\Fleck\SocketWrapper.cs">
+     <Link>SocketWrapper.cs</Link>
+   </Compile>
+   <Compile Include="..\Fleck\SubProtocolNegotiationFailureException.cs">
+     <Link>SubProtocolNegotiationFailureException.cs</Link>
+   </Compile>
+   <Compile Include="..\Fleck\SubProtocolNegotiator.cs">
+     <Link>SubProtocolNegotiator.cs</Link>
+   </Compile>
+   <Compile Include="..\Fleck\WebSocketConnection.cs">
+     <Link>WebSocketConnection.cs</Link>
+   </Compile>
+   <Compile Include="..\Fleck\WebSocketConnectionInfo.cs">
+     <Link>WebSocketConnectionInfo.cs</Link>
+   </Compile>
+   <Compile Include="..\Fleck\WebSocketException.cs">
+     <Link>WebSocketException.cs</Link>
+   </Compile>
+   <Compile Include="..\Fleck\WebSocketHttpRequest.cs">
+     <Link>WebSocketHttpRequest.cs</Link>
+   </Compile>
+   <Compile Include="..\Fleck\WebSocketServer.cs">
+     <Link>WebSocketServer.cs</Link>
+   </Compile>
+   <Compile Include="..\Fleck\WebSocketStatusCodes.cs">
+     <Link>WebSocketStatusCodes.cs</Link>
+   </Compile>
+   <Compile Include="..\Fleck\Handlers\ComposableHandler.cs">
+     <Link>Handlers\ComposableHandler.cs</Link>
+   </Compile>
+   <Compile Include="..\Fleck\Handlers\Draft76Handler.cs">
+     <Link>Handlers\Draft76Handler.cs</Link>
+   </Compile>
+   <Compile Include="..\Fleck\Handlers\FlashSocketPolicyRequestHandler.cs">
+     <Link>Handlers\FlashSocketPolicyRequestHandler.cs</Link>
+   </Compile>
+   <Compile Include="..\Fleck\Handlers\Hybi13Handler.cs">
+     <Link>Handlers\Hybi13Handler.cs</Link>
+   </Compile>
+   <Compile Include="..\Fleck\Helpers\MonoHelper.cs">
+     <Link>Helpers\MonoHelper.cs</Link>
+   </Compile>
+   <Compile Include="..\Fleck\Interfaces\IHandler.cs">
+     <Link>Interfaces\IHandler.cs</Link>
+   </Compile>
+   <Compile Include="..\Fleck\Interfaces\ISocket.cs">
+     <Link>Interfaces\ISocket.cs</Link>
+   </Compile>
+   <Compile Include="..\Fleck\Interfaces\IWebSocketConnection.cs">
+     <Link>Interfaces\IWebSocketConnection.cs</Link>
+   </Compile>
+   <Compile Include="..\Fleck\Interfaces\IWebSocketConnectionInfo.cs">
+     <Link>Interfaces\IWebSocketConnectionInfo.cs</Link>
+   </Compile>
+   <Compile Include="..\Fleck\Interfaces\IWebSocketServer.cs">
+     <Link>Interfaces\IWebSocketServer.cs</Link>
+   </Compile>
+ </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+</Project>
